@@ -1,0 +1,12 @@
+{
+  "name": "fm-browser-extensions-manager-ui",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "haquanq",
+  "license": "MIT",
+  "type": "module"
+}
