@@ -14,4 +14,21 @@
 
     --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
     --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+    --font-main: "Noto Sans", sans-serif;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+
+    --text-base: 1rem;
+    --text-md-1: 1.125rem;
+    --text-md-2: 1.25rem;
+    --text-lg: 2rem;
+
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
 }
