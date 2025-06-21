@@ -1,0 +1,17 @@
+:root {
+    --clr-neutral-900: hsl(227, 75%, 14%);
+    --clr-neutral-800: hsl(226, 25%, 17%);
+    --clr-neutral-700: hsl(225, 23%, 24%);
+    --clr-neutral-600: hsl(226, 11%, 37%);
+    --clr-neutral-300: hsl(0, 0%, 78%);
+    --clr-neutral-200: hsl(217, 61%, 90%);
+    --clr-neutral-100: hsl(0, 0%, 93%);
+    --clr-neutral-000: hsl(200, 60%, 99%);
+
+    --clr-red-400: hsl(3, 86%, 64%);
+    --clr-red-500: hsl(3, 71%, 56%);
+    --clr-red-700: hsl(3, 77%, 44%);
+
+    --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+    --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
