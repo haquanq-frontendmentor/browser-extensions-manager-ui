@@ -6,7 +6,7 @@ const fragment = (document.querySelector("#BrowserExtensionList") as HTMLTemplat
 export const ExtensionList = () => {
     const cloned = fragment.cloneNode(true) as DocumentFragment;
     const component = {
-        element: cloned.querySelector(".extension__list") as HTMLUListElement,
+        element: cloned.querySelector(".browser-extension-list") as HTMLUListElement,
     };
 
     const renderExtensionCard = () => {
