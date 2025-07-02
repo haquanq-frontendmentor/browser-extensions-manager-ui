@@ -9,3 +9,15 @@
     white-space: nowrap;
     border-width: 0;
 }
+
+@supports selector(:focus-within) {
+    .focusable {
+        input:focus {
+            outline: none;
+        }
+    }
+    .focusable:focus-within {
+        outline: 0.125rem solid var(--clr-red-400);
+        outline-offset: 0.125rem;
+    }
+}
