@@ -1,4 +1,4 @@
-.extension__card {
+.browser-extension-card {
     min-height: calc(200rem / 16);
     padding: var(--space-5);
     background-color: var(--bg-neutral-100);
@@ -8,21 +8,21 @@
     justify-content: space-between;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px;
-}
 
-.extension__card::before {
-    border-radius: inherit;
-    content: "";
-    display: block;
-    position: absolute;
-    inset: 0;
-    border: 1px solid var(--bg-neutral-400);
-    pointer-events: none;
-}
+    &::before {
+        border-radius: inherit;
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        border: 1px solid var(--bg-neutral-400);
+        pointer-events: none;
+    }
 
-.extension__intro {
-    display: flex;
-    align-items: start;
+    &__intro {
+        display: flex;
+        align-items: start;
+    }
 
     &__logo {
         margin-right: var(--space-4);
@@ -38,10 +38,10 @@
         line-height: var(--leading-snug);
         letter-spacing: -0.03em;
     }
-}
 
-.extension__action {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
