@@ -3,6 +3,12 @@
 @import "./base/reset.css";
 @import "./base/typography.css";
 
-@import "./layouts/header.css";
+@import "./components/switch.css";
+@import "./components/button.css";
+@import "./components/theme-button.css";
+@import "./components/extension-list.css";
+@import "./components/extension-card.css";
+
+@import "./pages/home.css";
 
 @import "./utils/accessibility.css";
