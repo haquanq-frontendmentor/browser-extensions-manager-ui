@@ -15,6 +15,32 @@
     <title>Frontend Mentor | Browser extensions manager UI</title>
   </head>
   <body>
+    <template id="ThemeButton">
+      <button
+        class="theme-btn focusable"
+        aria-label="Toggle theme (current: light mode)"
+        title="Toggle theme"
+      >
+        <img
+          aria-hidden="true"
+          src="./assets/images/icon-moon.svg"
+          alt="moon-icon"
+          hidden
+        />
+        <img
+          aria-hidden="true"
+          src="./assets/images/icon-sun.svg"
+          alt="sun-icon"
+          hidden
+        />
+        <span class="theme-btn__label sr-only">
+          <span>Turn on </span>
+          <span class="theme-btn__label--state">dark/light </span>
+          <span>mode</span>
+        </span>
+      </button>
+    </template>
+
     <template id="Button">
       <button class="btn focusable"></button>
     </template>

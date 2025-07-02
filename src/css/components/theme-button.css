@@ -1,0 +1,41 @@
+.theme-btn {
+    cursor: pointer;
+    position: relative;
+    border-radius: calc(var(--rounded-2xl) - 0.25rem);
+    padding: calc(var(--space-4) - 0.125rem);
+    background: var(--bg-neutral-200);
+    transition: transform 200ms ease;
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+    &__input {
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+        & + img {
+            display: block;
+        }
+        &:checked + img {
+            display: none;
+        }
+        &:checked + img + img {
+            display: block;
+        }
+    }
+}
+
+[data-theme="light"] {
+    .theme-btn img:nth-child(1) {
+        display: initial;
+    }
+}
+
+[data-theme="dark"] {
+    .theme-btn img:nth-child(2) {
+        display: initial;
+    }
+}
