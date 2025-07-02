@@ -1,5 +1,6 @@
 import path from "path";
 import { UserConfig } from "vite";
+import { InlineConfig } from "vitest/node";
 
 export default {
     root: "src/",
@@ -22,4 +23,4 @@ export default {
         reporters: "verbose",
         css: true,
     },
-} satisfies UserConfig;
+} satisfies UserConfig & { test: InlineConfig };
