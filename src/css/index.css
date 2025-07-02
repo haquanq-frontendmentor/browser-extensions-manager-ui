@@ -7,7 +7,7 @@
 @import "./components/button.css";
 @import "./components/theme-button.css";
 @import "./components/extension-list.css";
-@import "./components/extension-card.css";
+@import "./components/browser-extension-card.css";
 
 @import "./pages/home.css";
 
