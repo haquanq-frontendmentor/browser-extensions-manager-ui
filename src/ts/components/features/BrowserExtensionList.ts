@@ -27,6 +27,10 @@ export const ExtensionList = () => {
         renderExtensionCard();
     }, browserExtensionStore.removeExtension.name);
 
+    browserExtensionStore.subcribe(() => {
+        renderExtensionCard();
+    }, browserExtensionStore.setFilter.name);
+
     renderExtensionCard();
     return component.element;
 };
