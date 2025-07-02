@@ -2,7 +2,7 @@ import { BrowserExtension } from "../../types/BrowserExtension";
 import { ExtensionCardRemoveButton } from "./BrowserExtensionCardRemoveButton";
 import { ExtensionCardToggleButton } from "./BrowserExtensionCardToggleButton";
 
-const fragment = (document.querySelector("#browser-extension-card") as HTMLTemplateElement).content;
+const fragment = (document.querySelector("#BrowserExtensionCard") as HTMLTemplateElement).content;
 
 interface BrowserExtensionCardProps {
     browserExtension: BrowserExtension;
