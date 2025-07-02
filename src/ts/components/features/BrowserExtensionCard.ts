@@ -20,8 +20,8 @@ export const BrowserExtensionCard = (props: BrowserExtensionCardProps) => {
         toggleButton: ExtensionCardToggleButton({ browserExtension: props.browserExtension }),
     };
 
-    cloned.querySelector(".browser-extension-card__remove-btn")?.appendChild(component.removeButton.element);
-    cloned.querySelector(".browser-extension-card__toggle-btn")?.appendChild(component.toggleButton.element);
+    cloned.querySelector(".browser-extension-card__remove-btn-slot")?.appendChild(component.removeButton.element);
+    cloned.querySelector(".browser-extension-card__toggle-btn-slot")?.appendChild(component.toggleButton.element);
 
     component.logo.src = props.browserExtension.logo;
     component.logo.alt = props.browserExtension.name + "-logo";
