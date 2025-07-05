@@ -13,14 +13,7 @@
 
 body {
     -webkit-font-smoothing: antialiased;
-    line-height: var(--leading-none);
-    min-height: 100vh;
-    background: var(--bg-main);
-    color: var(--text-clr-body);
-}
-
-body.loading-theme * {
-    transition-duration: 0ms !important;
+    line-height: 1;
 }
 
 img,
@@ -57,7 +50,6 @@ h5,
 h6 {
     overflow-wrap: break-word;
     text-wrap: balance;
-    color: var(--text-clr-heading);
 }
 
 [hidden] {
