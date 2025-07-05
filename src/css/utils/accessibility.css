@@ -10,14 +10,18 @@
     border-width: 0;
 }
 
-@supports selector(:focus-within) {
-    .focusable {
-        input:focus {
-            outline: none;
-        }
+button:focus {
+    outline: var(--focus-outline-width) var(--focus-outline-style) var(--focus-outline-color);
+    outline-offset: var(--focus-outline-offset);
+}
+
+@supports selector(:focus-visible) {
+    button:focus {
+        outline: none;
     }
-    .focusable:focus-within {
-        outline: 0.125rem solid var(--clr-red-400);
-        outline-offset: 0.125rem;
+
+    button:focus-visible {
+        outline: var(--focus-outline-width) var(--focus-outline-style) var(--focus-outline-color);
+        outline-offset: var(--focus-outline-offset);
     }
 }

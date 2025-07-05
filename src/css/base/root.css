@@ -88,6 +88,11 @@
     --space-72: calc(var(--space-base) * 72); /* 288px */
     --space-80: calc(var(--space-base) * 80); /* 320px */
     --space-96: calc(var(--space-base) * 96); /* 384px */
+
+    --focus-outline-width: 0.125rem;
+    --focus-outline-style: solid;
+    --focus-outline-color: var(--clr-red-500);
+    --focus-outline-offset: 0.125rem;
 }
 
 [data-theme="dark"] {
