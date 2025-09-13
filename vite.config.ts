@@ -13,5 +13,5 @@ export default defineConfig({
         },
     },
     build: { outDir: "../dist/", emptyOutDir: true },
-    base: "/browser-entensions-manager-ui/",
+    base: "/browser-extensions-manager-ui/",
 });
