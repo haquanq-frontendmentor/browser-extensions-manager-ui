@@ -12,19 +12,16 @@
     width: var(--track-width);
     height: var(--track-height);
 
-    * {
-        pointer-events: none;
-    }
-
     &__thumb {
         position: relative;
         display: block;
         width: var(--thumb-size);
         height: var(--thumb-size);
         border-radius: inherit;
-        background-color: var(--clr-neutral-000);
+        background-color: var(--color-neutral-000);
         z-index: 999;
         transition: 200ms ease;
+        pointer-events: none;
     }
 
     &__track {
@@ -32,8 +29,10 @@
         border-radius: inherit;
         position: absolute;
         inset: 0;
-        background-color: var(--bg-neutral-400);
-        transition: 200ms ease;
+        background-color: var(--track-surface);
+        transition-property: background-color;
+        transition-timing-function: ease;
+        transition-duration: 200ms;
     }
 
     &__input {
@@ -42,27 +41,31 @@
     }
 
     &__input:checked + &__track {
-        background-color: var(--clr-red-700);
+        background-color: var(--track-surface-active);
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-red-400);
+            }
+        }
     }
 
     &__input:checked + * + &__thumb {
         margin-left: var(--thumb-size);
     }
-}
 
-@media (hover: hover) {
-    .switch:hover {
-        switch__track {
-            background-color: var(--clr-red-400);
-        }
-        switch__input:checked + switch__track {
-            background-color: var(--clr-red-400);
-        }
-    }
-}
-@supports selector(:focus-within) {
-    .switch:focus-within {
+    &__input:focus-visible + &__track {
         outline: var(--focus-outline-width) var(--focus-outline-style) var(--focus-outline-color);
         outline-offset: var(--focus-outline-offset);
     }
+}
+
+[data-theme="light"] .switch {
+    --track-surface: var(--color-neutral-300);
+    --track-surface-active: var(--color-red-700);
+}
+
+[data-theme="dark"] .switch {
+    --track-surface: var(--color-neutral-600);
+    --track-surface-active: var(--color-red-500);
 }

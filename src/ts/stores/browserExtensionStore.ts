@@ -78,20 +78,20 @@ const data: BrowserExtension[] = [
 
 type BrowserExtensionStoreState = {
     browserExtensions: BrowserExtension[];
-    currentFilter: number;
+    currentFilter: string;
 };
 
 type BrowserExtensionStoreAction = {
     getExtensions: (state: BrowserExtensionStoreState) => BrowserExtension[];
     toggleExtension: (state: BrowserExtensionStoreState, target: BrowserExtension) => BrowserExtensionStoreState | void;
     removeExtension: (state: BrowserExtensionStoreState, target: BrowserExtension) => BrowserExtensionStoreState | void;
-    setFilter: (state: BrowserExtensionStoreState, newFilter: number) => BrowserExtensionStoreState | void;
+    setFilter: (state: BrowserExtensionStoreState, newFilter: string) => BrowserExtensionStoreState | void;
 };
 
 const BROWSER_EXTENSION_FILTER = {
-    INACTIVE: 0,
-    ACTIVE: 1,
-    ALL: 2,
+    INACTIVE: "inactive",
+    ACTIVE: "active",
+    ALL: "all",
 };
 
 const browserExtensionStoreInitialState = {
@@ -101,7 +101,12 @@ const browserExtensionStoreInitialState = {
 
 const browserEntensionStoreAction: BrowserExtensionStoreAction = {
     getExtensions: (state) => {
-        return state.browserExtensions.filter((v) => Number(v.isActive) !== state.currentFilter);
+        return state.browserExtensions.filter((v) => {
+            return (
+                (v.isActive ? BROWSER_EXTENSION_FILTER.ACTIVE : BROWSER_EXTENSION_FILTER.INACTIVE) !==
+                state.currentFilter
+            );
+        });
     },
     toggleExtension: (state, target) => {
         for (const v of state.browserExtensions) {
@@ -133,7 +138,7 @@ const browserExtensionStore = {
             browserEntensionStoreAction.removeExtension.name
         );
     },
-    setFilter: (newFilter: number) => {
+    setFilter: (newFilter: string) => {
         store.setState(
             (state) => browserEntensionStoreAction.setFilter(state, newFilter),
             browserEntensionStoreAction.setFilter.name

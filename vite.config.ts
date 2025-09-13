@@ -1,8 +1,7 @@
 import path from "path";
-import { UserConfig } from "vite";
-import { InlineConfig } from "vitest/node";
+import { defineConfig } from "vite";
 
-export default {
+export default defineConfig({
     root: "src/",
     resolve: {
         alias: {
@@ -13,14 +12,6 @@ export default {
             "@@types": path.resolve(__dirname, "./src/ts/types"),
         },
     },
-    test: {
-        root: "./",
-        environment: "jsdom",
-        coverage: {
-            enabled: true,
-            provider: "v8",
-        },
-        reporters: "verbose",
-        css: true,
-    },
-} satisfies UserConfig & { test: InlineConfig };
+    build: { outDir: "../dist/", emptyOutDir: true },
+    base: "/browser-entensions-manager-ui/",
+});

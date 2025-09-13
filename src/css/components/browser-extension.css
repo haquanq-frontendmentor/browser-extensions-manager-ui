@@ -1,0 +1,90 @@
+.browser-extension {
+    margin: 0 auto;
+    width: min(100vw - 2rem, calc(1170rem / 16));
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: var(--space-8);
+
+        @media screen and (min-width: 42em) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        font-size: var(--text-lg);
+        line-height: var(--leading-snug);
+        margin-bottom: calc(var(--space-4) + 0.125rem);
+    }
+
+    &__list {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        display: grid;
+        gap: var(--space-3);
+        grid-template-columns: repeat(auto-fill, minmax(23.875rem, 1fr));
+    }
+
+    &__item-empty {
+        width: 100%;
+        position: absolute;
+        font-style: italic;
+        border-top: 1px solid var(--bg-neutral-400);
+        padding-top: var(--space-6);
+        text-align: center;
+        color: var(--color-heading);
+    }
+
+    &__item {
+        min-height: calc(200rem / 16);
+        padding: var(--space-5);
+        background-color: var(--card-surface);
+        border-radius: calc(var(--rounded-2xl) + 0.25rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 5%) 0 2px 4px;
+
+        &::before {
+            border-radius: inherit;
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--card-border);
+            pointer-events: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: start;
+    }
+
+    &__logo {
+        margin-right: var(--space-4);
+    }
+
+    &__name {
+        font-size: var(--text-md-2);
+        line-height: calc(1em + 0.25rem);
+        margin-bottom: var(--space-2);
+    }
+
+    &__description {
+        line-height: var(--leading-snug);
+        letter-spacing: -0.03em;
+        color: var(--color-paragraph);
+    }
+
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

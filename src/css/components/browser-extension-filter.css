@@ -1,0 +1,60 @@
+.browser-extension-filter {
+    border: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--space-3);
+
+    &__option {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        border-radius: var(--rounded-full);
+        padding: var(--space-2) calc(var(--space-5)) calc(var(--space-3) - 0.125rem) var(--space-5);
+
+        @supports selector(:focus-within) {
+            &:focus-within {
+                outline: var(--focus-outline-width) var(--focus-outline-style) var(--focus-outline-color);
+                outline-offset: var(--focus-outline-offset);
+            }
+        }
+    }
+
+    &__input {
+        position: absolute;
+        appearance: none;
+        opacity: 0;
+    }
+
+    &__label {
+        pointer-events: none;
+        position: relative;
+        z-index: 2;
+        line-height: 1.4;
+        font-size: var(--text-md-2);
+        color: var(--color-heading);
+    }
+
+    &__bg {
+        display: block;
+        border-radius: inherit;
+        position: absolute;
+        inset: 0;
+        background-color: var(--card-surface);
+        border: 1px solid var(--card-border);
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--card-border);
+            }
+        }
+    }
+
+    &__input:checked ~ &__bg {
+        background-color: var(--card-surface-active);
+        border-color: var(--card-border-active);
+    }
+
+    &__input:checked + &__label {
+        color: var(--color-neutral-000);
+    }
+}

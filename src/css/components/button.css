@@ -4,8 +4,8 @@
     border-radius: var(--rounded-full);
     background-color: transparent;
     font-weight: var(--font-medium);
-    border: 1px solid var(--bg-neutral-400);
-    color: var(--text-clr-heading);
+    border: 1px solid var(--card-border);
+    color: var(--color-heading);
     transition-property: background-color, border-color, color;
     transition-duration: 200ms;
     transition-timing-function: ease;
@@ -13,8 +13,8 @@
 
 @media (hover: hover) {
     .btn:hover {
-        background-color: var(--clr-red-700);
-        color: var(--clr-neutral-000);
-        border-color: var(--clr-red-700);
+        background-color: var(--color-red-700);
+        color: var(--color-neutral-000);
+        border-color: var(--color-red-700);
     }
 }
