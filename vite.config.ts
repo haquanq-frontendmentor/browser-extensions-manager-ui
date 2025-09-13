@@ -2,7 +2,6 @@ import path from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    root: "src/",
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src/ts"),
@@ -12,6 +11,6 @@ export default defineConfig({
             "@@types": path.resolve(__dirname, "./src/ts/types"),
         },
     },
-    build: { outDir: "../dist/", emptyOutDir: true },
+    build: { emptyOutDir: true },
     base: "/browser-extensions-manager-ui/",
 });
