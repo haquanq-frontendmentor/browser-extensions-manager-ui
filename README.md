@@ -51,7 +51,7 @@ Accessibility
 
 ### Preview (Desktop)
 
-![](./docs/design/desktop-design.jpg)
+![](./docs/design/desktop-design-dark.jpg)
 
 ## :stars: Tech Stack and Approach
 
