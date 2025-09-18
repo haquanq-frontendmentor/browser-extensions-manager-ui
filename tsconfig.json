@@ -34,7 +34,7 @@
       "@components/*": ["components/*"],
       "@stores/*": ["stores/*"],
       "@@types/*": ["types/*"],
-      "@utils/*": ["utils/*"]
+      "@helpers/*": ["helpers/*"]
     },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */

@@ -4,13 +4,14 @@ import { defineConfig } from "vite";
 export default defineConfig({
     resolve: {
         alias: {
-            "@": path.resolve(__dirname, "./src/ts"),
-            "@components": path.resolve(__dirname, "./src/ts/components"),
-            "@stores": path.resolve(__dirname, "./src/ts/stores"),
-            "@utils": path.resolve(__dirname, "./src/ts/utils"),
-            "@@types": path.resolve(__dirname, "./src/ts/types"),
+            "@": path.resolve(__dirname, "./"),
+            "@components": path.resolve(__dirname, "./components"),
+            "@stores": path.resolve(__dirname, "./stores"),
+            "@helpers": path.resolve(__dirname, "./helpers"),
+            "@@types": path.resolve(__dirname, "./types"),
         },
     },
-    build: { emptyOutDir: true },
+    root: "src/",
+    build: { outDir: "../dist/", emptyOutDir: true },
     base: "/browser-extensions-manager-ui/",
 });

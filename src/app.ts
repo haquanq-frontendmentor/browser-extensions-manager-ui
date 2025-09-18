@@ -1,12 +1,12 @@
-import { themeStore } from "@stores/themeStore";
-import { BrowserExtension } from "@@types/BrowserExtension";
+import { themeStore } from "./stores/themeStore";
+import { BrowserExtension } from "./types/BrowserExtension";
 
 const browserExtensionFilterOptions = document.querySelectorAll(
     ".browser-extension-filter__input"
 ) as NodeListOf<HTMLInputElement>;
 const browserExtensionFilterForm = document.querySelector("#browser-extension-filter-form") as HTMLFormElement;
 
-import { BROWSER_EXTENSION_FILTER, browserExtensionStore } from "@stores/browserExtensionStore";
+import { BROWSER_EXTENSION_FILTER, browserExtensionStore } from "./stores/browserExtensionStore";
 
 if (browserExtensionFilterOptions.length !== 0) {
     browserExtensionFilterOptions[0].value = BROWSER_EXTENSION_FILTER.ALL;

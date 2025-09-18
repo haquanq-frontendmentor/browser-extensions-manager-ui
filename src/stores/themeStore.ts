@@ -1,4 +1,4 @@
-import { createStore } from "@utils/createStore";
+import { createStore } from "../helpers/createStore";
 
 type ThemeStoreState = {
     theme: "dark" | "light";

@@ -1,5 +1,5 @@
-import { createStore } from "@utils/createStore";
-import { BrowserExtension } from "@@types/BrowserExtension";
+import { createStore } from "../helpers/createStore";
+import { BrowserExtension } from "../types/BrowserExtension";
 
 const data: BrowserExtension[] = [
     {

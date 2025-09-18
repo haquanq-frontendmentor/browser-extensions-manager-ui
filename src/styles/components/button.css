@@ -1,6 +1,7 @@
 .btn {
     line-height: var(--leading-tight);
-    padding: var(--space-2) calc(var(--space-4));
+    padding-block: var(--space-2);
+    padding-inline: calc(var(--space-4));
     border-radius: var(--rounded-full);
     background-color: transparent;
     font-weight: var(--font-medium);
@@ -9,6 +10,10 @@
     transition-property: background-color, border-color, color;
     transition-duration: 200ms;
     transition-timing-function: ease;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 }
 
 @media (hover: hover) {

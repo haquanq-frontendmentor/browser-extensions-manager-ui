@@ -15,8 +15,8 @@ body {
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     background: var(--body-background-gradient);
-    padding-top: clamp(var(--space-6), 3vw + 0.5rem, var(--space-10));
-    padding-bottom: var(--space-16);
+    padding-block-start: clamp(var(--space-6), 3vw + 0.5rem, var(--space-10));
+    padding-block-end: var(--space-16);
     line-height: var(--leading-none);
     font-family: var(--font-main);
     font-size: var(--text-base);
@@ -63,4 +63,24 @@ h6 {
 
 [hidden] {
     display: none;
+}
+
+button:focus {
+    outline-width: var(--focus-outline-width);
+    outline-color: var(--focus-outline-color);
+    outline-style: var(--focus-outline-style);
+    outline-offset: var(--focus-outline-offset);
+}
+
+@supports selector(:focus-visible) {
+    button:focus {
+        outline: none;
+    }
+
+    button:focus-visible {
+        outline-width: var(--focus-outline-width);
+        outline-color: var(--focus-outline-color);
+        outline-style: var(--focus-outline-style);
+        outline-offset: var(--focus-outline-offset);
+    }
 }

@@ -4,7 +4,7 @@
     --color-neutral-700: hsl(225, 23%, 24%);
     --color-neutral-600: hsl(226, 11%, 37%);
     --color-neutral-300: hsl(0, 0%, 78%);
-    --color-neutral-200: hsl(217, 61%, 90%);
+    --color-neutral-200: hsl(240, 1%, 85%);
     --color-neutral-100: hsl(0, 0%, 93%);
     --color-neutral-000: hsl(200, 60%, 99%);
 
@@ -14,6 +14,8 @@
 
     --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
     --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+    --shadow-sm: rgba(0, 0, 0, 5%) 0 2px 4px;
 
     --font-main: "Noto Sans", sans-serif;
     --font-normal: 400;
@@ -79,10 +81,10 @@
     --space-80: calc(var(--space-base) * 80); /* 320px */
     --space-96: calc(var(--space-base) * 96); /* 384px */
 
-    --focus-outline-width: 0.125rem;
-    --focus-outline-style: solid;
+    --focus-outline-style: dashed;
     --focus-outline-color: var(--color-red-500);
-    --focus-outline-offset: 0.125rem;
+    --focus-outline-offset: 3px;
+    --focus-outline-width: 3px;
 
     --body-background-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
 

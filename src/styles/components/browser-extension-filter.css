@@ -1,4 +1,7 @@
 .browser-extension-filter {
+    --surface: var(--card-surface);
+    --surface-hover: var(--color-neutral-200);
+
     border: 0;
     padding: 0;
     display: flex;
@@ -41,10 +44,15 @@
         inset: 0;
         background-color: var(--card-surface);
         border: 1px solid var(--card-border);
+        transition: background-color 200ms ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
 
         @media (hover: hover) {
             &:hover {
-                background-color: var(--card-border);
+                background-color: var(--surface-hover);
             }
         }
     }
@@ -57,4 +65,8 @@
     &__input:checked + &__label {
         color: var(--color-neutral-000);
     }
+}
+
+[data-theme="dark"] .browser-extension-filter {
+    --surface-hover: var(--color-neutral-600);
 }

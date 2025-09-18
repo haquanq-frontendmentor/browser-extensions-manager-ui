@@ -9,4 +9,4 @@
 @import "./components/browser-extension-filter.css";
 @import "./components/header.css";
 
-@import "./utils/accessibility.css";
+@import "./utils/a11y.css";

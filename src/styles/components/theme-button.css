@@ -1,10 +1,22 @@
 .theme-btn {
-    cursor: pointer;
+    --surface: var(--color-neutral-100);
+    --surface-hover: var(--color-neutral-300);
+
     position: relative;
     border-radius: calc(var(--rounded-2xl) - 0.25rem);
     padding: calc(var(--space-4) - 0.125rem);
-    transition: transform 200ms ease;
-    background-color: var(--color-neutral-100);
+    background-color: var(--surface);
+    transition: background-color 200ms ease;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--surface-hover);
+        }
+    }
 
     &:active {
         transform: scale(0.95);
@@ -42,7 +54,8 @@
 
 [data-theme="dark"] {
     .theme-btn {
-        background-color: var(--color-neutral-700);
+        --surface: var(--color-neutral-700);
+        --surface-hover: var(--color-neutral-600);
     }
 
     .theme-btn img:nth-child(2) {
