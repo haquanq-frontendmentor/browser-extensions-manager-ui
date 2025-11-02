@@ -1,6 +1,6 @@
 {
   "name": "Browser Extensions Manager UI",
-  "favorite": false,
+  "featured": false,
   "colors:": {
     "brand": "#C8231A"
   },
