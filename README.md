@@ -3,7 +3,7 @@
 This is a solution to the [Browser extensions manager UI challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 <p>
-  <a href="">
+  <a href="https://www.frontendmentor.io/solutions/dynamic-rendering-using-vanilla-jsts-mobile-first-responsive-hz3HLTQIHW">
     <img
       alt="Solution post"
       src="https://img.shields.io/badge/Frontendmentor-blue?label=Solution%20on"
